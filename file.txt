@@ -1,0 +1,49 @@
+var number = document.getElementById('numberContainer')
+number.innerText = `${numRandom()}`
+
+var scoreNumber = document.getElementById('scoreNumberContainer')
+scoreNumber.innerText = `${scoreNum}`
+
+validateYes = () => {
+    if (isThisBum() === "bum") {
+        alert("Bum")
+        scoreNum+=1
+        numRandom()
+    } else {
+        alert("You are wrong")
+    
+    }
+
+}
+
+validateNo = () => {
+    if (isThisBum() === "not bum") {
+        alert("Not bum")
+        scoreNum+=1
+        numRandom()
+    } else {
+        alert("You are wrong")
+    }
+
+}
+console.log(scoreNum)
+
+.scoreNumberContainer{
+    display: flex;
+    justify-content: center;
+    height:300px;
+    width: 100%;
+    color: black;
+    font-size: 2vh;
+}
+    <div class="numberContainer" id="numberContainer" > 
+    </div>
+    <h2>Czy ta liczba to bum?</h2>
+    <div class="buttonContainer">
+        
+        <button onclick="validateYes()">Tak</button>
+        <button onclick="validateNo()">Nie</button>
+
+    </div>
+    <div class="scoreNumberContainer" id="scoreNumberContainer" > 
+    </div>

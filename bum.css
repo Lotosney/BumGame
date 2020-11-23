@@ -1,0 +1,29 @@
+html{
+    background-color: antiquewhite;
+}
+
+.rules{
+    display: flex;
+    height:30%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;  
+}
+
+
+.numberContainer{
+    display: flex;
+    justify-content: center;
+    height:300px;
+    width: 100%;
+    color: black;
+    font-size: 10vh;
+}
+.scoreNumberContainer{
+    display: flex;
+    justify-content: center;
+    height:300px;
+    width: 100%;
+    color: black;
+    font-size: 2vh;
+}
