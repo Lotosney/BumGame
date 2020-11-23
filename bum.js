@@ -13,9 +13,13 @@ var isThisBum = () => {
 
     } else {
         return "not bum"
-        // console.log("notbum")
+
     }
 }
 
+var number = document.getElementById('numberContainer')
+number.innerText = `${numRandom()}`
 
+var scoreNumber = document.getElementById('scoreNumberContainer')
+scoreNumber.innerText = `${scoreNum}`
 
