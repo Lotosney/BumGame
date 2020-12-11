@@ -1,9 +1,10 @@
-var scoreNum = 0
-var yesText= "Zgadłeś!"
-var noText = "Dobrze, To nie jest bum"
-var wrongText ="Źle, to nie jest Bum,"
-var wrongBumText ="Źle, to jest Bum"
-var fillText= "Tu będzie feedback"
+let scoreNum = 0;
+let negScoreNum = 0;
+const yesText = "Zgadłeś!";
+const noText = "Dobrze, To nie jest bum";
+const wrongText = "Źle, to nie jest Bum,";
+const wrongBumText = "Źle, to jest Bum";
+const fillText = "Tu będzie feedback";
 var num;
 num = Math.floor(Math.random() * (100 - 3)) + 3
 
@@ -15,6 +16,8 @@ yesNoText.innerText = `${fillText}`
 
 var scoreNumber = document.getElementById('scoreNumberContainer')
 scoreNumber.innerText = `${scoreNum}`
+var negativeScoreNumber = document.getElementById('negativeScoreNumberContainer')
+negativeScoreNumber.innerText = `${negScoreNum}`
 
 console.log(num)
 var isThisBum = () => {
@@ -35,33 +38,36 @@ var isThisBum = () => {
 console.log(isThisBum())
 validateYes = () => {
     if (isThisBum() === "bum") {
-        
-        let text= yesText
-        scoreNum=scoreNum+1
+
+        let text = yesText
+        scoreNum = scoreNum + 1
         scoreNumber.innerText = `${scoreNum}`
 
-        yesNoText.innerText=`${text}`
+        yesNoText.innerText = `${text}`
 
     } else {
 
-        let text= wrongBumText
-        yesNoText.innerText=`${text}`
-
+        let text = wrongBumText
+        yesNoText.innerText = `${text}`
+        negScoreNum = negScoreNum + 1
+        negativeScoreNumber.innerText = `${negScoreNum}`
     }
 
 }
 
 validateNo = () => {
     if (isThisBum() === "not bum") {
-      
-        scoreNum=scoreNum+1
+
+        scoreNum = scoreNum + 1
         scoreNumber.innerText = `${scoreNum }`
-        let text= noText
-        yesNoText.innerText=`${text}`
+        let text = noText
+        yesNoText.innerText = `${text}`
     } else {
-        
-        let text= noText
-        yesNoText.innerText=`${text}`
+
+        let text = noText
+        yesNoText.innerText = `${text}`
+        negScoreNum = negScoreNum + 1
+        negativeScoreNumber.innerText = `${negScoreNum}`
     }
 
 }
