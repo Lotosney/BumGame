@@ -8,19 +8,19 @@ const fillText = "Tu będzie feedback";
 var num;
 num = Math.floor(Math.random() * (100 - 3)) + 3
 
-var number = document.getElementById('numberContainer')
+const number = document.getElementById('numberContainer')
 number.innerText = `${num}`
 
-var yesNoText = document.getElementById('yesNoContainer')
+const yesNoText = document.getElementById('yesNoContainer')
 yesNoText.innerText = `${fillText}`
 
-var scoreNumber = document.getElementById('scoreNumberContainer')
+const scoreNumber = document.getElementById('scoreNumberContainer')
 scoreNumber.innerText = `${scoreNum}`
-var negativeScoreNumber = document.getElementById('negativeScoreNumberContainer')
+const negativeScoreNumber = document.getElementById('negativeScoreNumberContainer')
 negativeScoreNumber.innerText = `${negScoreNum}`
 
 console.log(num)
-var isThisBum = () => {
+isThisBum = () => {
 
     if (num % 3 === 0 || num.toString().includes(3)) {
         num = Math.floor(Math.random() * (100 - 3)) + 3;
@@ -64,7 +64,7 @@ validateNo = () => {
         yesNoText.innerText = `${text}`
     } else {
 
-        let text = noText
+        let text = wrongText
         yesNoText.innerText = `${text}`
         negScoreNum = negScoreNum + 1
         negativeScoreNumber.innerText = `${negScoreNum}`
