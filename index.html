@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="bum.css">
+    <title>Gra w Bum</title>
+</head>
+<body>
+    <div class="rules">
+        <h1>Gra w Bum</h1>
+        <h2> Zasady gry</h2>
+        <p> Gra w Bum jest grą matematyczną. Polega ona na odgadnieciu czy dana liczba zawiera liczbę
+             3 lub jest jej wielokrotnością</p>
+    </div>
+    <div class="numberContainer" id="numberContainer" > 
+    </div>
+    <h2>Czy ta liczba to bum?</h2>
+
+    <div class="buttonContainer">
+        <button onclick="validateYes()">Tak</button>
+        <button onclick="validateNo()">Nie</button>
+
+    </div>
+    <div class="yesNoContainer" id="yesNoContainer" > 
+    </div>
+    <h2>Wynik</h2>
+    <div class="scoreNumberContainer" id="scoreNumberContainer" > 
+    </div>
+    <h2>Wynik negatywny</h2>
+    <div class="negativeScoreNumberContainer" id="negativeScoreNumberContainer" > 
+    </div>
+    <script src="/bum.js"></script>
+</body>
+</html>
